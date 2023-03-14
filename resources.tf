@@ -7,7 +7,7 @@ resource "aws_instance" "web-server1" {
   vpc_security_group_ids      = ["${aws_security_group.sgweb.id}"]
   associate_public_ip_address = true
   source_dest_check           = false
-  key_name                    = "DennisO101KP"
+  key_name                    = "DemoKP"
   user_date = <<-EOF
               #!/bin/bash
               yum update -y
@@ -19,7 +19,7 @@ resource "aws_instance" "web-server1" {
 
   tags = {
     Name        = "Terraform-Webserver"
-    Builder     = "Dennis O"
+    Builder     = "sam"
     Application = "Apache-Server-Test"
     Date        = "RAM"
   }
